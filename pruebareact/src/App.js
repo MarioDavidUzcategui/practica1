@@ -30,11 +30,11 @@ constructor(props){
         console.log(this.state.person)
         return (
             <div>
- <h1>Welcome User</h1>
- <p>This is your dashboard and I am an example of a stateless functional component.</p>
- <Link to="/settings">Goto Settings Page</Link>
- <br></br>
- <Link to="/login">Login</Link>
+    <h1>Welcome User</h1>
+        <p>This is your dashboard and I am an example of a stateless functional component.</p>
+        <Link to="/settings">Goto Settings Page</Link>
+        <br></br>
+    <Link to="/login">Login</Link>
  <br></br>
  <Link to="/auth/login">Back to login page</Link>
  <div> {this.state.person && this.state.person.map(e =><div> {e.name.first}</div>)}</div>

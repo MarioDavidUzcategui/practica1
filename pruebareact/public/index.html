@@ -25,10 +25,46 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      body{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0px;
+        padding: 0px;
+      }
+      nav{
+        background-color: black;
+        color:blue;
+        font-weight: 700;
+        font-size: 2em;
+        margin: 0px;
+        padding: 0px
+
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      
+      
+    </style>
     
   </head>
-  <body>
-    <h1> Prueba de react </h1>
+  <body style="background-color:cadetblue">
+    <nav>
+      <ul>
+        <li>
+        <a href=""> Inicio</a>
+        </li>
+        <li>
+        <a href=""> Tipos de guitarras</a>
+        </li>
+        <li>
+        <a href=""> Redes sociales</a> 
+        </li>
+      </ul>
+    </nav>
+    <h1> Guitarras </h1>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
