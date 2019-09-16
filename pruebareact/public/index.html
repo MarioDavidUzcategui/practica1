@@ -31,6 +31,7 @@
         font-family: 'Courier New', Courier, monospace;
         margin: 0px;
         padding: 0px;
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(0,0,255,1))); /* safari4+,chrome */
       }
       nav{
         background-color: black;
@@ -44,13 +45,22 @@
       nav ul {
         display: flex;
         list-style: none;
+        text-align: center;
+        justify-content: center
+      }
+      nav a {
+        padding: 1.5rem;
+        text-decoration: none;
+      }
+      nav a:hover {
+        color: white
       }
       
       
     </style>
     
   </head>
-  <body style="background-color:cadetblue">
+  <body>
     <nav>
       <ul>
         <li>

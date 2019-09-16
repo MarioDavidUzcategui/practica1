@@ -1,0 +1,29 @@
+.nav-router {
+    width: 700px;
+    text-align: center;
+    margin: auto;
+    background-color: blue;
+    
+
+}
+.nav-router ul a{ 
+    color:red;
+    
+}
+ .nav-router ul a:hover{
+     color: beige;
+ }
+
+ .imagen {
+    width:500px ;
+    height: 500px;
+ }
+ .borde{
+     border-width: 1px;
+     border-style: solid;
+     max-width: 800px;
+     margin: auto
+ }
+ .lista{
+     list-style: none;
+ }
