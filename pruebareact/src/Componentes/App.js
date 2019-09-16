@@ -11,14 +11,13 @@ class App extends Component {
         super()
         this.state= {
             guitars: usersAPI.all(),
-            classicGuitar:[],
-            acusticGUitar:[],
-            electricGuitar:[]
+            filteredGuitar:[],
+          
         }   
     }
     mostrarGuitars = (modelo)=>{
-        const classicGuitar = this.state.guitars.filter(e=>e.tipo===modelo)
-        this.setState({classicGuitar})
+        const filteredGuitar = this.state.guitars.filter(e=>e.tipo===modelo)
+        this.setState({filteredGuitar})
     }
    
     render(){
@@ -28,12 +27,14 @@ class App extends Component {
                     <Header/>
                     <Main/>
                 </div>
+                <div>
                 <button onClick={()=>this.mostrarGuitars("clasica")}>Clasicas</button>
                 <button onClick={()=>this.mostrarGuitars("acustica")}>Acusticas</button>
                 <button onClick={()=>this.mostrarGuitars("electrica")}>Electricas</button>
-                <ul>
+                </div>
+                <ul className="lista2 borde">
                     
-                    {this.state.classicGuitar.map(e=><li>{e.modelo}</li>)}
+                    {this.state.filteredGuitar.map(e=><li>{e.modelo}</li>)}
                     
                     
                 </ul>
