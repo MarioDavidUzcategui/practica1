@@ -3,20 +3,38 @@
     text-align: center;
     margin: auto;
     background-color: blue;
+    display: flex
+    
     
 
 }
-.nav-router ul a{ 
-    color:red;
+.nav-router ul{
+    list-style-type: none;
+    display: inline-block;
+    margin: auto
     
 }
+.nav-router li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    
+}
+.nav-router ul a{ 
+    color:brown;
+    
+}
+
  .nav-router ul a:hover{
      color: beige;
+     text-decoration: none
  }
 
  .imagen {
     width:500px ;
     height: 500px;
+    margin: auto;
+    display: block
  }
  .borde{
      border-width: 1px;
@@ -27,6 +45,7 @@
  }
  .lista{
      list-style: none;
+     text-align: center
  }
  .lista2{
     list-style: none;
@@ -34,5 +53,80 @@
     color: green
 }
 button{
-    margin: 10px
+    margin: 10px;
+    text-align: center;
+    
+   
 }
+.wrapper {
+    text-align: center
+}
+h1{
+    text-align: center;
+}
+img{
+    margin: auto
+}
+.ParaLink{
+    text-align: center;
+    
+}
+.Nav-prin{
+    background-color: black;
+    display: flex;
+    margin-bottom: 50px;
+}
+.Nav-prin ul{ 
+    list-style: none;
+    margin: 0;
+}
+.Nav-prin li  {
+    display: inline-flex;
+    margin: 20px;
+
+}
+.Nav-prin li:hover  {
+    background-color: aqua
+    
+}
+.Nav-prin ul a{
+    color: orange;
+    font-size: 20px;
+}
+.Nav-prin ul a:hover{
+    color: black;
+    font-size: 20px;
+}
+.Nav-prin form{
+    display: flex;
+    margin: 20px;
+
+}
+.espacio{
+    width: 60%;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+.dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+
+}
+.prueba a{ 
+    color: black !important;
+
+}
+.prueba a:hover{
+    color: blue !important;
+}
+.like {
+    background: url("https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Facebook-Like-Button.png?fit=1444%2C600");
+    margin-left: 47.5%;
+}
+ .imagen-like{
+     height: 50px;
+     width: 50px;
+     cursor:pointer !important;
+ }   

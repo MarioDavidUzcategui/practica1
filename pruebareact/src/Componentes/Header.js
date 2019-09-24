@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import  '../estilos/router.css'
+import '../estilos/router.css'
 
 const Header = () => (
   <nav className="nav-router">

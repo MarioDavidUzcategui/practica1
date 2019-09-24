@@ -1,7 +1,7 @@
 import React from 'react'
 import UsersAPI from '../api'
 import { Link } from 'react-router-dom'
-import  '../estilos/router.css'
+import '../estilos/router.css'
 
 const mapUser = url => {
   console.log(url)
@@ -15,7 +15,7 @@ const mapUser = url => {
 }
 
 const AllUsers = ({ match }) => (
-  <div >
+  <div>
     <ul className="lista">{mapUser(match.url)}</ul>
   </div>
 )
