@@ -17,13 +17,16 @@ class App extends Component {
     const filteredGuitar = this.state.guitars.filter(e => e.tipo === modelo)
     this.setState({ filteredGuitar })
   }
+  recuperarEstado = (algo) =>{
+    this.setState({usuario:algo})
+  }
 
   render() {
     
     return (
       <div>
         <div>
-          <Nav />
+          <Nav propiedad1={this.recuperarEstado}/>
         </div>
         <h1>Guitarras</h1>
         <div className="borde">
@@ -52,6 +55,8 @@ class App extends Component {
             <li>{e.modelo}</li>
           ))}
         </ul>
+        <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
+        </div>
       </div>
     )
   }

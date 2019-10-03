@@ -130,3 +130,8 @@ img{
      width: 50px;
      cursor:pointer !important;
  }   
+ .respuesta-servidor{
+     border: 2px solid blanchedalmond;
+     text-align: center;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
