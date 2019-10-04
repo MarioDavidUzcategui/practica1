@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 import '../estilos/router.css'
 import like from '../like.svg'
 import unlike from '../unlike.svg'
+import { connect } from "react-redux";
+import modificarsaves from '../actions'
+
+
+
 
 
 class Profile extends Component {
@@ -17,16 +22,17 @@ class Profile extends Component {
 
   handleOnclick = ()=>{
     
-
+    this.props.modificarsaves()
     this.setState({
       saves:this.state.saves + 1,
       like: !this.state.like 
     })
+    
   }
 
   render() {
     const {
-      location,
+      
       match: {
         params: { modelo }
       }
@@ -55,5 +61,5 @@ class Profile extends Component {
     )
   }
 }
+export default connect(null,{modificarsaves})(Profile)
 
-export default Profile

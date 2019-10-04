@@ -4,6 +4,13 @@ import '../estilos/router.css'
 import React, { Component } from 'react'
 import usersAPI from '../api'
 import Nav from './Nav'
+import { connect } from "react-redux";
+
+const mapStateToProps = function(state) {
+  return {
+    like: state.like
+  }
+}
 
 class App extends Component {
   constructor() {
@@ -16,10 +23,9 @@ class App extends Component {
   mostrarGuitars = modelo => {
     const filteredGuitar = this.state.guitars.filter(e => e.tipo === modelo)
     this.setState({ filteredGuitar })
+    console.log(this.props.like)
   }
-  recuperarEstado = (algo) =>{
-    this.setState({usuario:algo})
-  }
+  
 
   render() {
     
@@ -57,9 +63,11 @@ class App extends Component {
         </ul>
         <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
         </div>
+        <div className="respuesta-servidor"> {this.props.like?"like":"unlike"}
+        </div>
       </div>
     )
   }
 }
 
-export default App
+export default connect(mapStateToProps)(App)
