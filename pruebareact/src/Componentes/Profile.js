@@ -7,7 +7,12 @@ import unlike from '../unlike.svg'
 import { connect } from "react-redux";
 import modificarsaves from '../actions'
 
-
+const mapStateToProps = function(state) {
+  return {
+    like: state.like,
+    modelo:state.modelo
+  }
+}
 
 
 
@@ -16,13 +21,14 @@ class Profile extends Component {
     super()
     this.state = {
       saves: 0,
-      like: false
+      
     }
   }
 
   handleOnclick = ()=>{
-    
-    this.props.modificarsaves()
+    const guitars = usersAPI.getFilteredGuitars(this.props.match.params.modelo)
+    console.log(guitars.modelo)
+    this.props.modificarsaves(guitars.modelo)
     this.setState({
       saves:this.state.saves + 1,
       like: !this.state.like 
@@ -61,5 +67,5 @@ class Profile extends Component {
     )
   }
 }
-export default connect(null,{modificarsaves})(Profile)
+export default connect(mapStateToProps,{modificarsaves})(Profile)
 

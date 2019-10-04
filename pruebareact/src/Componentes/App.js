@@ -5,10 +5,12 @@ import React, { Component } from 'react'
 import usersAPI from '../api'
 import Nav from './Nav'
 import { connect } from "react-redux";
+import ListGuitars from './ListGuitars'
 
 const mapStateToProps = function(state) {
   return {
-    like: state.like
+    like: state.like,
+    modelo:state.modelo
   }
 }
 
@@ -23,7 +25,7 @@ class App extends Component {
   mostrarGuitars = modelo => {
     const filteredGuitar = this.state.guitars.filter(e => e.tipo === modelo)
     this.setState({ filteredGuitar })
-    console.log(this.props.like)
+    console.log(this.props.modelo)
   }
   
 
@@ -63,8 +65,7 @@ class App extends Component {
         </ul>
         <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
         </div>
-        <div className="respuesta-servidor"> {this.props.like?"like":"unlike"}
-        </div>
+        <ListGuitars/>
       </div>
     )
   }

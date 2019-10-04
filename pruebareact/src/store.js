@@ -4,19 +4,19 @@ import {createStore} from 'redux';
  
 /*Create a function called configureStore */
 const initialState = {
-  like: false  
-      
+  like: [false],  
+  modelo:"modelo"    
 }
 
 function modificarSaves(state=initialState, action) {
   switch(action.type) {
        
-      /* Add contacts to the state array */
     
       case "MODIFICAR_SAVES": {
           
           return Object.assign({}, state, {
-              like: !state.like
+              like: !state.like,
+              modelo:action.payload
             });
               
               
