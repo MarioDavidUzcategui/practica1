@@ -97,6 +97,9 @@ this.setState({
                 </a>
               </div>
             </li>
+            <li>
+              {this.props.algo}
+            </li>
             
           </ul>
           

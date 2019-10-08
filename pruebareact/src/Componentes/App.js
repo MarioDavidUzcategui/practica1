@@ -6,11 +6,13 @@ import usersAPI from '../api'
 import Nav from './Nav'
 import { connect } from "react-redux";
 import ListGuitars from './ListGuitars'
+import User from './User'
+import Profile from './Profile'
 
-const mapStateToProps = function(state) {
+const mapStateToProps = function(store) {
   return {
-    like: state.like,
-    modelo:state.modelo
+    like: store.like,
+    modelo:store.modelo
   }
 }
 
@@ -37,9 +39,15 @@ class App extends Component {
           <Nav propiedad1={this.recuperarEstado}/>
         </div>
         <h1>Guitarras</h1>
+        <div className="Exterior">
+        <div className="listaguitars">
+        <ListGuitars/>
+        </div>
         <div className="borde">
-          <Header />
-          <Main />
+          <Header/>
+          <Main/>
+          <Header/>
+        </div>
         </div>
         <div className="wrapper">
           <button
@@ -65,7 +73,7 @@ class App extends Component {
         </ul>
         <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
         </div>
-        <ListGuitars/>
+        
       </div>
     )
   }

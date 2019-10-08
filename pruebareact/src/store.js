@@ -4,8 +4,8 @@ import {createStore} from 'redux';
  
 /*Create a function called configureStore */
 const initialState = {
-  like: [false],  
-  modelo:"modelo"    
+  like: [],  
+  modelo:[]    
 }
 
 function modificarSaves(state=initialState, action) {
@@ -15,8 +15,8 @@ function modificarSaves(state=initialState, action) {
       case "MODIFICAR_SAVES": {
           
           return Object.assign({}, state, {
-              like: !state.like,
-              modelo:action.payload
+              like: [...state.like,true],
+              modelo:[...state.modelo,action.payload]
             });
               
               

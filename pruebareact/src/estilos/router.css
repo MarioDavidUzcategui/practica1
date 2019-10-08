@@ -31,8 +31,8 @@
  }
 
  .imagen {
-    width:500px ;
-    height: 500px;
+    width:200px ;
+    height: 200px;
     margin: auto;
     display: block
  }
@@ -42,6 +42,15 @@
      max-width: 700px;
      margin: auto;
      list-style: none;
+     display:inline-block;
+ }
+ .Exterior{
+     display: block
+ }
+ .listaguitars{
+     display:inline-block;
+     margin-right: 10%;
+     border: 1px solid white
  }
  .lista{
      list-style: none;

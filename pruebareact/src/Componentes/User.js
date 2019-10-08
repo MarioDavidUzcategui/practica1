@@ -6,7 +6,7 @@ import Profile from './Profile.js'
 const Users = ({ match }) => (
   <Switch>
     <Route exact path={`${match.url}`} component={AllUsers} />
-    <Route path={`${match.url}/:modelo`} component={Profile} />
+    <Route path={`${match.url}/:modelo`} render={props=><Profile {...props} ejemplo3={props.ejemplo2}/>}/>
   </Switch>
 )
 

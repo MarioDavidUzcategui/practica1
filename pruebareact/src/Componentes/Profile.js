@@ -59,7 +59,8 @@ class Profile extends Component {
         <img className="imagen-like" onClick={this.handleOnclick} src={this.state.like ? like: unlike } />
         <span>{this.state.like ? "like" : "unlike"}</span>
         
-        
+        <div>{this.props.children}</div>
+        <div>{this.props.ejemplo3}</div>
         <div className="ParaLink">
           <Link to="/users">Back</Link>
         </div>

@@ -9,13 +9,30 @@ const mapStateToProps = function(state) {
 }
 
 const ListGuitars = (props)=> {
-
+  const lista = props.like.map((i,index)=>
+  <li>
+    {i &&(
+    <div>
+      <div>
+      
+      </div>
+      <div>
+     { props.modelo[index]}
+     </div>
+    </div> )}
+  </li>)
 
   return(
-    <div>
+    <>
+  <div>
+  {(props.like[0])&&
+    ((props.like.length<=1)?'Te gusta el modelo':'te gustan los modelos') }
+  </div>
+    <ul>
+      {lista}
       
-      {props.like? `A ti te gustó el modelo:${props.modelo}`:""}
-    </div>
+    </ul>
+    </>
   )
 }
 export default connect(mapStateToProps)(ListGuitars)
