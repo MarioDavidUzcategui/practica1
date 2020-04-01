@@ -29,10 +29,10 @@ class App extends Component {
     this.setState({ filteredGuitar })
     console.log(this.props.modelo)
   }
-  
+
 
   render() {
-    
+    console.log('props',this.props)
     return (
       <div>
         <div>
@@ -73,7 +73,6 @@ class App extends Component {
         </ul>
         <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
         </div>
-        
       </div>
     )
   }
