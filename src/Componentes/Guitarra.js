@@ -16,35 +16,34 @@ const mapStateToProps = function(state) {
 
 
 
-class Profile extends Component {
+class Guitarra extends Component {
   constructor() {
     super()
     this.state = {
       saves: 0,
-      
+
     }
   }
 
   handleOnclick = ()=>{
-    const guitars = usersAPI.getFilteredGuitars(this.props.match.params.modelo)
-    console.log(guitars.modelo)
-    this.props.modificarsaves(guitars.modelo)
+    const guitar = usersAPI.findModelGuitars(this.props.match.params.modelo)
+    console.log('guitarra',guitar)
+    this.props.modificarsaves(guitar.modelo)
     this.setState({
       saves:this.state.saves + 1,
-      like: !this.state.like 
+      like: !this.state.like
     })
-    
+
   }
 
   render() {
     const {
-      
       match: {
         params: { modelo }
       }
     } = this.props
-    const guitars = usersAPI.getFilteredGuitars(modelo)
-    console.log(guitars)
+    const guitars = usersAPI.findModelGuitars(modelo)
+    console.log('guitarras',guitars)
 
     if (!guitars) {
       return <div>La guitarra no fuè encontrada</div>
@@ -52,13 +51,14 @@ class Profile extends Component {
     return (
       <div>
         <h1>
-          {guitars.modelo} (id: {guitars.id})
+          {guitars.modelo} {`id: ${guitars.id}`}
         </h1>
 
-        <img className="imagen" src={guitars.imagen} />
+
+        <img href='guitarra' className="imagen" src={guitars.imagen} />
         <img className="imagen-like" onClick={this.handleOnclick} src={this.state.like ? like: unlike } />
         <span>{this.state.like ? "like" : "unlike"}</span>
-        
+
         <div>{this.props.children}</div>
         <div>{this.props.ejemplo3}</div>
         <div className="ParaLink">
@@ -68,5 +68,5 @@ class Profile extends Component {
     )
   }
 }
-export default connect(mapStateToProps,{modificarsaves})(Profile)
+export default connect(mapStateToProps,{modificarsaves})(Guitarra)
 

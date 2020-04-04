@@ -1,17 +1,20 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Profile from './Profile'
+import Profile from './Guitarra'
 
-import Home from './Home'
-import User from './User'
-import About from './About'
+import Clasicas from './Clasicas'
+import Acusticas from './Acusticas'
+import Electricas from './Electricas'
 
-const Main = () => (
-  <Switch>
-    <Route exact path="/clasicas" component={User} />
-    <Route path="/acusticas" component={User}/>
-    <Route path="/electricas" component={About} />
-  </Switch>
-)
+const Main = () => {
+  console.log('estoy en Main')
+  return (
+    <Switch>
+      <Route path="/clasicas" component={Clasicas} />
+      <Route path="/acusticas" component={Acusticas}/>
+      <Route path="/electricas" component={Electricas} />
+    </Switch>
+  )
+}
 
 export default Main

@@ -11,8 +11,8 @@ import App from './Componentes/App'
 render(
   <Provider store={store}>
     <Router>
-    <App />
-  </Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 )

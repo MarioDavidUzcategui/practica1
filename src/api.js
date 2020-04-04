@@ -70,8 +70,13 @@ const usersAPI = {
   get: function(id) {
     return this.users.find(u => u.id === id)
   },
-  getFilteredGuitars: function(modelo) {
-    return this.users.find(e => e.modelo === modelo)
+  getFilteredGuitars: function(tipo) {
+    const filterdGuitars = this.users.filter(e => e.tipo === tipo)
+    return filterdGuitars
+  },
+  findModelGuitars: function(modelo) {
+    const filterdGuitars = this.users.find(e => e.modelo === modelo)
+    return filterdGuitars
   }
 }
 

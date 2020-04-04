@@ -9,6 +9,7 @@ const mapStateToProps = function(state) {
 }
 
 const ListGuitars = (props)=> {
+  console.log('modelos', props.modelo)
   const lista = props.like.map((i,index)=>
   <li>
     {i &&(

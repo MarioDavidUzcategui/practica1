@@ -6,8 +6,8 @@ import usersAPI from '../api'
 import Nav from './Nav'
 import { connect } from "react-redux";
 import ListGuitars from './ListGuitars'
-import User from './User'
-import Profile from './Profile'
+import User from './Acusticas'
+import Profile from './Guitarra'
 
 const mapStateToProps = function(store) {
   return {
@@ -24,10 +24,9 @@ class App extends Component {
       filteredGuitar: []
     }
   }
-  mostrarGuitars = modelo => {
-    const filteredGuitar = this.state.guitars.filter(e => e.tipo === modelo)
+  mostrarGuitars = tipo => {
+    const filteredGuitar = usersAPI.getFilteredGuitars(tipo)
     this.setState({ filteredGuitar })
-    console.log(this.props.modelo)
   }
 
 
@@ -41,12 +40,11 @@ class App extends Component {
         <h1>Guitarras</h1>
         <div className="Exterior">
         <div className="listaguitars">
-        <ListGuitars/>
+          <ListGuitars/>
         </div>
         <div className="borde">
           <Header/>
           <Main/>
-          <Header/>
         </div>
         </div>
         <div className="wrapper">
