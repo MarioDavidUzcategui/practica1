@@ -9,49 +9,45 @@ class Nav extends Component {
       usuario: []
     }
   }
-      
-   
 
-handleOnCLick =()=>{
-  const {email} = this.state
-  
-  fetch('http://localhost:3001/prueba', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-     email 
-      
+  handleOnCLick = () =>{
+    const {email} = this.state
+
+    fetch('http://localhost:3001/prueba', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+      email
+
+      })
+
+    }).then(resp=>resp.json()).then(response => {
+      console.log("respuesta del servidos¡r", response)
+      this.setState({
+        usuario: response.usuario
+      })
+      console.log(this.state.usuario)
+      this.props.propiedad1(this.state.usuario)
     })
-    
-  }).then(resp=>resp.json()).then(response => {
-    console.log("respuesta del servidos¡r", response)
+  }
+
+  setEmail = e => {
+    const email = e.target.value
     this.setState({
-      usuario: response.usuario
-    })
-    console.log(this.state.usuario)
-     this.props.propiedad1(this.state.usuario)   
+    email
   })
-  
-}
-
-setEmail =(e)=>{
-const email = e.target.value
-this.setState({
-  email
-})
-}
+  }
 
   render(){
     return (
       (
         <nav className="Nav-prin">
-          <ul>
+          <ul className='Nav-list'>
             <li>
               <a href="">Inicio</a>{' '}
             </li>
-      
             <li className="dropdown">
               <a
                 href="#"
@@ -74,7 +70,6 @@ this.setState({
                 </a>
               </div>
             </li>
-      
             <li className="dropdown">
               <a
                 href="#"
@@ -100,9 +95,7 @@ this.setState({
             <li>
               {this.props.algo}
             </li>
-            
           </ul>
-          
           <div className="espacio"></div>
           <form action="localhost:3001" name="miformulario" id="formulario">
             <input type="text" placeholder="Ingrese Email" name="form1" onChange={this.setEmail}/>

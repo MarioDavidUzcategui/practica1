@@ -34,18 +34,16 @@ class App extends Component {
     console.log('props',this.props)
     return (
       <div>
-        <div>
-          <Nav propiedad1={this.recuperarEstado}/>
-        </div>
+        <Nav propiedad1={this.recuperarEstado}/>
         <h1>Guitarras</h1>
         <div className="Exterior">
-        <div className="listaguitars">
-          <ListGuitars/>
-        </div>
-        <div className="borde">
-          <Header/>
-          <Main/>
-        </div>
+          <div className="listaguitars">
+            <ListGuitars/>
+          </div>
+          <div className="borde">
+            <Header/>
+            <Main/>
+          </div>
         </div>
         <div className="wrapper">
           <button

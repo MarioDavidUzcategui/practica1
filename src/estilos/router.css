@@ -4,31 +4,28 @@
     margin: auto;
     background-color: blue;
     display: flex
-    
-    
-
 }
+
 .nav-router ul{
     list-style-type: none;
     display: inline-block;
     margin: auto
-    
 }
+
 .nav-router li{
     list-style-type: none;
     display: inline-block;
     padding: 10px;
-    
-}
-.nav-router ul a{ 
-    color:brown;
-    
 }
 
- .nav-router ul a:hover{
-     color: beige;
-     text-decoration: none
- }
+.nav-router ul a{
+    color:brown;
+}
+
+.nav-router ul a:hover{
+    color: beige;
+    text-decoration: none
+}
 
  .imagen {
     width:200px ;
@@ -44,9 +41,11 @@
      list-style: none;
      display:inline-block;
  }
+
  .Exterior{
-     display: block
+     margin: 0;
  }
+
  .listaguitars{
      display:inline-block;
      margin-right: 10%;
@@ -64,8 +63,8 @@
 button{
     margin: 10px;
     text-align: center;
-    
-   
+
+
 }
 .wrapper {
     text-align: center
@@ -78,14 +77,17 @@ img{
 }
 .ParaLink{
     text-align: center;
-    
+
 }
 .Nav-prin{
     background-color: black;
     display: flex;
+    flex-direction: row;
     margin-bottom: 50px;
 }
-.Nav-prin ul{ 
+
+.Nav-prin ul{
+    display: flex;
     list-style: none;
     margin: 0;
 }
@@ -96,7 +98,7 @@ img{
 }
 .Nav-prin li:hover  {
     background-color: aqua
-    
+
 }
 .Nav-prin ul a{
     color: orange;
@@ -117,13 +119,13 @@ img{
 .dropdown:hover>.dropdown-menu {
     display: block;
   }
-  
+
 .dropdown>.dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/
       pointer-events: none;
 
 }
-.prueba a{ 
+.prueba a{
     color: black !important;
 
 }
@@ -138,7 +140,7 @@ img{
      height: 50px;
      width: 50px;
      cursor:pointer !important;
- }   
+ }
  .respuesta-servidor{
      border: 2px solid blanchedalmond;
      text-align: center;

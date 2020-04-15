@@ -27,12 +27,17 @@ class Guitarra extends Component {
 
   handleOnclick = ()=>{
     const guitar = usersAPI.findModelGuitars(this.props.match.params.modelo)
-    console.log('guitarra',guitar)
-    this.props.modificarsaves(guitar.modelo)
-    this.setState({
-      saves:this.state.saves + 1,
-      like: !this.state.like
-    })
+    if (this.props.modelo.includes(this.props.match.params.modelo)) {
+      return null
+    } else
+      console.log('guitarra',guitar)
+      console.log('props',this.props)
+
+      this.props.modificarsaves(guitar.modelo)
+      this.setState({
+        saves:this.state.saves + 1,
+        like: !this.state.like
+      })
 
   }
 
@@ -48,6 +53,8 @@ class Guitarra extends Component {
     if (!guitars) {
       return <div>La guitarra no fuè encontrada</div>
     }
+
+    
     return (
       <div>
         <h1>
