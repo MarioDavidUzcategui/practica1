@@ -117,13 +117,39 @@ class Nav extends Component {
             </li>
           </ul>
           <div className='registro' >
-            <button className='btn btn-primary'>Registrarse</button>
+            <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Registrarse
+            </button>
             <button className='btn btn-success'>Iniciar Sesion</button>
           </div>
-         {/*  <form action="localhost:3001" name="miformulario" id="formulario">
-            <input type="text" placeholder="Ingrese Email" name="form1" onChange={this.setEmail}/>
-            <input type="button" value="Iniciar Sesion" onClick={this.handleOnCLick}/>
-          </form> */}
+
+          <div className="modal fade titulo" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal-dialog" role="document">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title " id="exampleModalLabel">Regístrate</h5>
+                  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div className="modal-body">
+                  <form name="miformulario" id="formulario">
+                    <label>
+                      Email:{' '}
+                    </label>
+                      <input type="text" placeholder="Ingrese Email" name="form1" /* onChange={this.setEmail} *//>
+                    <label>
+                      Contraseña:{' '}
+                    </label>
+                      <input type="password" placeholder='Ingresa contraseña' /* onClick={this.handleOnCLick} *//>
+                  </form>
+                </div>
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
       )
     )

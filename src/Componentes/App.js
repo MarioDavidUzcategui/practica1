@@ -26,8 +26,8 @@ class App extends Component {
   render() {
     console.log('props', this.props.modelo)
     return (
-      <div className='background-color'>
-        <Nav propiedad1={this.recuperarEstado} />
+      <div className='fondo'>
+        <Nav />
         <div className='hero'>
           <h1 className='title'>Guitarras</h1>
         </div>
@@ -64,7 +64,7 @@ class App extends Component {
         </ul> */}
         {/* <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
         </div> */}
-    </div>
+      </div>
     )
   }
 }
