@@ -6,15 +6,7 @@ import usersAPI from '../api'
 import Nav from './Nav'
 import { connect } from "react-redux";
 import ListGuitars from './ListGuitars'
-import User from './Acusticas'
-import Profile from './Guitarra'
 
-const mapStateToProps = function(store) {
-  return {
-    like: store.like,
-    modelo:store.modelo
-  }
-}
 
 class App extends Component {
   constructor() {
@@ -24,6 +16,7 @@ class App extends Component {
       filteredGuitar: []
     }
   }
+
   mostrarGuitars = tipo => {
     const filteredGuitar = usersAPI.getFilteredGuitars(tipo)
     this.setState({ filteredGuitar })
@@ -31,18 +24,20 @@ class App extends Component {
 
 
   render() {
-    console.log('props',this.props)
+    console.log('props', this.props.modelo)
     return (
-      <div>
-        <Nav propiedad1={this.recuperarEstado}/>
-        <h1>Guitarras</h1>
+      <div className='background-color'>
+        <Nav propiedad1={this.recuperarEstado} />
+        <div className='hero'>
+          <h1 className='title'>Guitarras</h1>
+        </div>
         <div className="Exterior">
-          <div className="listaguitars">
-            <ListGuitars/>
-          </div>
+          {this.props.modelo.length > 0 ?
+            <ListGuitars /> : null
+          }
           <div className="borde">
-            <Header/>
-            <Main/>
+            <Header />
+            <Main />
           </div>
         </div>
         <div className="wrapper">
@@ -62,15 +57,22 @@ class App extends Component {
             Electricas
           </button>
         </div>
-        <ul className="lista2 borde">
+        {/* <ul className="lista2 borde">
           {this.state.filteredGuitar.map(e => (
             <li>{e.modelo}</li>
           ))}
-        </ul>
-        <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
-        </div>
-      </div>
+        </ul> */}
+        {/* <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
+        </div> */}
+    </div>
     )
+  }
+}
+
+const mapStateToProps = (store) => {
+  return {
+    like: store.like,
+    modelo: store.modelo
   }
 }
 

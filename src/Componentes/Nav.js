@@ -96,11 +96,14 @@ class Nav extends Component {
               {this.props.algo}
             </li>
           </ul>
-          <div className="espacio"></div>
-          <form action="localhost:3001" name="miformulario" id="formulario">
+          <div className='registro' >
+            <button className='btn btn-primary'>Registrarse</button>
+            <button className='btn btn-success'>Iniciar Sesion</button>
+          </div>
+         {/*  <form action="localhost:3001" name="miformulario" id="formulario">
             <input type="text" placeholder="Ingrese Email" name="form1" onChange={this.setEmail}/>
             <input type="button" value="Iniciar Sesion" onClick={this.handleOnCLick}/>
-          </form>
+          </form> */}
         </nav>
       )
     )

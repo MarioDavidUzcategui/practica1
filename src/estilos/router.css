@@ -1,148 +1,198 @@
 .nav-router {
-    width: 700px;
-    text-align: center;
-    margin: auto;
-    background-color: blue;
-    display: flex
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  background-color: blue;
+  display: flex
 }
 
-.nav-router ul{
-    list-style-type: none;
-    display: inline-block;
-    margin: auto
+.nav-router ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: auto
 }
 
-.nav-router li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px;
+.nav-router li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
 }
 
-.nav-router ul a{
-    color:brown;
+.nav-router ul a {
+  font-weight: bold;
+  font-size: 20px;
+  color: red;
 }
 
-.nav-router ul a:hover{
-    color: beige;
-    text-decoration: none
+.nav-router ul a:hover {
+  color: beige;
+  text-decoration: none
 }
 
- .imagen {
-    width:200px ;
-    height: 200px;
-    margin: auto;
-    display: block
- }
- .borde{
-     border-width: 1px;
-     border-style: solid;
-     max-width: 700px;
-     margin: auto;
-     list-style: none;
-     display:inline-block;
- }
-
- .Exterior{
-     margin: 0;
- }
-
- .listaguitars{
-     display:inline-block;
-     margin-right: 10%;
-     border: 1px solid white
- }
- .lista{
-     list-style: none;
-     text-align: center
- }
- .lista2{
-    list-style: none;
-    background-color: aqua;
-    color: green
+.imagen {
+  width: 80%;
+  margin: auto;
+  display: block
 }
-button{
-    margin: 10px;
-    text-align: center;
 
-
+.borde {
+  width: 50%;
+  border-width: 1px;
+  border-style: solid;
+  max-width: 700px;
+  margin: auto;
+  list-style: none;
+  display: inline-block;
 }
+
+.Exterior {
+  display: flex;
+  flex-direction: row;
+}
+
+.listaguitars {
+  border: 1px solid white
+}
+
+.lista {
+  list-style: none;
+  text-align: center
+}
+
+.lista2 {
+  list-style: none;
+  background-color: aqua;
+  color: green
+}
+
+button {
+  margin: 10px;
+  text-align: center;
+}
+
 .wrapper {
-    text-align: center
-}
-h1{
-    text-align: center;
-}
-img{
-    margin: auto
-}
-.ParaLink{
-    text-align: center;
-
-}
-.Nav-prin{
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 50px;
+  text-align: center
 }
 
-.Nav-prin ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://www.musicnexo.com/blog/wp-content/uploads/2016/10/historia-de-la-guitarra-electrica.jpg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 20px;
 }
-.Nav-prin li  {
-    display: inline-flex;
-    margin: 20px;
 
+.title {
+  display: inline;
+  color: rgb(236, 11, 11);
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
 }
-.Nav-prin li:hover  {
-    background-color: aqua
 
+img {
+  margin: auto
 }
-.Nav-prin ul a{
-    color: orange;
-    font-size: 20px;
-}
-.Nav-prin ul a:hover{
-    color: black;
-    font-size: 20px;
-}
-.Nav-prin form{
-    display: flex;
-    margin: 20px;
 
+.ParaLink {
+  text-align: center;
 }
-.espacio{
-    width: 60%;
+
+.Nav-prin {
+  background-color: black;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
 }
+
+.Nav-prin ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.Nav-prin li {
+  display: inline-flex;
+  margin: 20px;
+}
+
+.Nav-prin li:hover {
+  background-color: aqua
+}
+
+.Nav-prin ul a {
+  color: orange;
+  font-size: 20px;
+}
+
+.Nav-prin ul a:hover {
+  color: black;
+  font-size: 20px;
+}
+
+.Nav-prin form {
+  display: flex;
+  margin: 20px;
+}
+
+.registro {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+}
+
+.espacio {
+  width: 60%;
+}
+
 .dropdown:hover>.dropdown-menu {
-    display: block;
-  }
+  display: block;
+}
 
 .dropdown>.dropdown-toggle:active {
-    /*Without this, clicking will make it sticky*/
-      pointer-events: none;
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
 
+.prueba a {
+  color: black !important;
 }
-.prueba a{
-    color: black !important;
 
+.prueba a:hover {
+  color: blue !important;
 }
-.prueba a:hover{
-    color: blue !important;
-}
+
 .like {
-    background: url("https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Facebook-Like-Button.png?fit=1444%2C600");
-    margin-left: 47.5%;
+  background: url("https://i1.wp.com/www.vectorico.com/wp-content/uploads/2018/02/Facebook-Like-Button.png?fit=1444%2C600");
+  margin-left: 47.5%;
 }
- .imagen-like{
-     height: 50px;
-     width: 50px;
-     cursor:pointer !important;
- }
- .respuesta-servidor{
-     border: 2px solid blanchedalmond;
-     text-align: center;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- }
+
+.imagen-like {
+  height: 50px;
+  width: 50px;
+  cursor: pointer !important;
+}
+
+.respuesta-servidor {
+  border: 2px solid blanchedalmond;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.background-color {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  color: aliceblue;
+}
+
+.title2 {
+  text-align: center;
+}
+
+
+

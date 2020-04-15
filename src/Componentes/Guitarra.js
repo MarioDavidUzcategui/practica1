@@ -7,14 +7,6 @@ import unlike from '../unlike.svg'
 import { connect } from "react-redux";
 import modificarsaves from '../actions'
 
-const mapStateToProps = function(state) {
-  return {
-    like: state.like,
-    modelo:state.modelo
-  }
-}
-
-
 
 class Guitarra extends Component {
   constructor() {
@@ -54,14 +46,14 @@ class Guitarra extends Component {
       return <div>La guitarra no fuè encontrada</div>
     }
 
-    
     return (
       <div>
-        <h1>
-          {guitars.modelo} {`id: ${guitars.id}`}
+        <h1 className='title2'>
+        {`Modelo numero ${guitars.id}`}
         </h1>
-
-
+        <h1 className='title2'>
+         {guitars.modelo}
+        </h1>
         <img href='guitarra' className="imagen" src={guitars.imagen} />
         <img className="imagen-like" onClick={this.handleOnclick} src={this.state.like ? like: unlike } />
         <span>{this.state.like ? "like" : "unlike"}</span>
@@ -75,5 +67,13 @@ class Guitarra extends Component {
     )
   }
 }
+
+const mapStateToProps = function(state) {
+  return {
+    like: state.like,
+    modelo:state.modelo
+  }
+}
+
 export default connect(mapStateToProps,{modificarsaves})(Guitarra)
 

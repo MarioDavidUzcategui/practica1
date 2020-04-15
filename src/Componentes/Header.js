@@ -6,13 +6,13 @@ const Header = () => (
   <nav className="nav-router">
     <ul>
       <li>
-        <Link to="/clasicas">Clàsicas</Link>
+        <Link to="/clasicas">Clásicas</Link>
       </li>
       <li>
         <Link to="/acusticas">Acusticas</Link>
       </li>
       <li>
-        <Link to="/electricas">Elèctricas</Link>
+        <Link to="/electricas">Eléctricas</Link>
       </li>
     </ul>
   </nav>
