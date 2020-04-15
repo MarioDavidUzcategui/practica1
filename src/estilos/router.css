@@ -48,9 +48,12 @@
 .Exterior {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 .listaguitars {
+  position: absolute;
+  margin-top: 30%;
   display: flex;
   align-items: center;
   margin-left: 10px;
@@ -84,6 +87,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
   background-image: url('https://www.musicnexo.com/blog/wp-content/uploads/2016/10/historia-de-la-guitarra-electrica.jpg');
   height: 300px;
   background-repeat: no-repeat;

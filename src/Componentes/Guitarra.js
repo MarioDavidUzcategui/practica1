@@ -49,7 +49,7 @@ class Guitarra extends Component {
     return (
       <div>
         <h1 className='title2'>
-        {`Modelo numero ${guitars.id}`}
+        {`Modelo id: ${guitars.id}`}
         </h1>
         <h1 className='title2'>
          {guitars.modelo}

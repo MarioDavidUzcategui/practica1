@@ -60,11 +60,11 @@ class Nav extends Component {
                 <Link className="dropdown-item" to="/clasicas/clasica1">
                   clasica1
                 </Link>
-                <Link className="dropdown-item" to="/clasicas/clasica3">
+                <Link className="dropdown-item" to="/clasicas/clasica2">
                   clasica2
                 </Link>
                 <Link className="dropdown-item" to="/clasicas/clasica3">
-                  calsica3
+                  clasica3
                 </Link>
               </div>
             </li>
