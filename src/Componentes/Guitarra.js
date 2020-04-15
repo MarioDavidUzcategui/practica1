@@ -17,7 +17,7 @@ class Guitarra extends Component {
     }
   }
 
-  handleOnclick = ()=>{
+  handleOnclick = () =>{
     const guitar = usersAPI.findModelGuitars(this.props.match.params.modelo)
     if (this.props.modelo.includes(this.props.match.params.modelo)) {
       return null
@@ -25,7 +25,7 @@ class Guitarra extends Component {
       console.log('guitarra',guitar)
       console.log('props',this.props)
 
-      this.props.modificarsaves(guitar.modelo)
+      this.props.modificarsaves(guitar.modelo, this.props.match.params.modelo)
       this.setState({
         saves:this.state.saves + 1,
         like: !this.state.like
@@ -55,9 +55,11 @@ class Guitarra extends Component {
          {guitars.modelo}
         </h1>
         <img href='guitarra' className="imagen" src={guitars.imagen} />
-        <img className="imagen-like" onClick={this.handleOnclick} src={this.state.like ? like: unlike } />
-        <span>{this.state.like ? "like" : "unlike"}</span>
-
+        <div>Guarda una lista con las guitarras que te gustan dando click a LIKE!</div>
+        <div className={this.props.modelo.includes(this.props.match.params.modelo) ? 'imagen-like' : 'unclicked'}>
+          <img className='imagen2' onClick={this.handleOnclick} src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/1200px-Facebook_Thumb_icon.svg.png' />
+          <span>Like</span>
+        </div>
         <div>{this.props.children}</div>
         <div>{this.props.ejemplo3}</div>
         <div className="ParaLink">

@@ -1,38 +1,26 @@
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 
 // modificarSaves from './reducers';
 
 /*Create a function called configureStore */
 const initialState = {
-  like: [],
-  modelo:[]
+  modelo: []
 }
 
-function modificarSaves(state=initialState, action) {
-  switch(action.type) {
+function modificarSaves(state = initialState, action) {
+  console.log('reduce', action)
+  switch (action.type) {
 
+    case "MODIFICAR_SAVES": {
 
-      case "MODIFICAR_SAVES": {
+      return Object.assign({}, state, {
+        modelo: [...state.modelo, action.objeto]
+      });
+    }
 
-          return Object.assign({}, state, {
-              like: [...state.like,true],
-              modelo:[...state.modelo,action.payload]
-            });
-
-
-
-     }
-
-
-
-
-
-
-      default: return state;
+    default: return state;
   }
 }
-
-
 
 const store = createStore(modificarSaves);
 export default store;

@@ -4,27 +4,24 @@ import { connect } from "react-redux";
 
 const ListGuitars = (props) => {
   console.log('modelos', props.modelo)
-  const lista = props.like.map((i,index)=>
+  const lista = props.modelo.map((i)=>
   <li>
-    {i &&(
-    <div>
-      <div>
-      </div>
-      <div>
-     { props.modelo[index]}
-     </div>
-    </div> )}
+    {i}
   </li>)
 
   return(
-    <div >
-      <div className='listaguitars'>
-      {(props.like[0])&&
-      ((props.like.length<=1)?'Te gusta el modelo':'te gustan los modelos') }
+    <div className='listaguitars'>
+      <div>
+        <div >
+          {(props.modelo[0])&&
+          ((props.modelo.length<=1)?'Te gusta el modelo':'te gustan los modelos') }
+        </div>
+        <div>
+          <ul>
+            {lista}
+          </ul>
+        </div>
       </div>
-      <ul>
-        {lista}
-      </ul>
     </div>
   )
 }

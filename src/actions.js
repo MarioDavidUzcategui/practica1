@@ -1,7 +1,7 @@
-const modificarsaves =(modelo) => {
+const modificarsaves = (modelo) => {
   return {
       type: "MODIFICAR_SAVES",
-      payload: modelo
+      objeto: modelo
   }
 }
 export default modificarsaves

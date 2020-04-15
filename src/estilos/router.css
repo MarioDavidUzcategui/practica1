@@ -51,12 +51,18 @@
 }
 
 .listaguitars {
-  border: 1px solid white
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .lista {
   list-style: none;
-  text-align: center
+  text-align: center;
+}
+
+.lista li a {
+  color: aquamarine;
 }
 
 .lista2 {
@@ -87,7 +93,7 @@ button {
 
 .title {
   display: inline;
-  color: rgb(236, 11, 11);
+  color: rgb(230, 8, 8);
   font-size: 100px;
   font-weight: bold;
   text-align: center;
@@ -173,6 +179,16 @@ img {
 }
 
 .imagen-like {
+  background-color: chartreuse;
+  display: inline-block;
+  padding: 5px;
+}
+
+.unclicked {
+  display: inline-block;
+}
+
+.imagen2 {
   height: 50px;
   width: 50px;
   cursor: pointer !important;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import '../estilos/router.css'
 
@@ -45,51 +46,70 @@ class Nav extends Component {
       (
         <nav className="Nav-prin">
           <ul className='Nav-list'>
-            <li>
-              <a href="">Inicio</a>{' '}
-            </li>
             <li className="dropdown">
-              <a
+              <Link
                 href="#"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false">
-                Guitarras
-              </a>
+                Clásicas
+              </Link>
               <div
                 className="dropdown-menu prueba"
                 aria-labelledby="dropdownMenuButton">
-                <a className="dropdown-item" href="#">
-                  Clasicas
-                </a>
-                <a className="dropdown-item" href="#">
-                  Acusticas
-                </a>
-                <a className="dropdown-item" href="#">
-                  Electrica
-                </a>
+                <Link className="dropdown-item" to="/clasicas/clasica1">
+                  clasica1
+                </Link>
+                <Link className="dropdown-item" to="/clasicas/clasica3">
+                  clasica2
+                </Link>
+                <Link className="dropdown-item" to="/clasicas/clasica3">
+                  calsica3
+                </Link>
               </div>
             </li>
             <li className="dropdown">
-              <a
+              <Link
                 href="#"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false">
-                Partituras
-              </a>
+                Acústicas
+              </Link>
               <div
                 className="dropdown-menu prueba"
                 aria-labelledby="dropdownMenuButton">
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
+                <Link className="dropdown-item" to="/acusticas/acustica1">
+                  acustica1
+                </Link>
+                <Link className="dropdown-item" to="/acusticas/acustica2">
+                  acustica2
+                </Link>
+                <Link className="dropdown-item" to="/acusticas/acustica3">
+                  acustica3
+                </Link>
+              </div>
+            </li>
+            <li className="dropdown">
+              <Link
+                href="#"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+                Eléctricas
+              </Link>
+              <div
+                className="dropdown-menu prueba"
+                aria-labelledby="dropdownMenuButton">
+                <Link className="dropdown-item" to="/electricas/electrica1">
+                  electrica1
+                </Link>
+                <Link className="dropdown-item" to="/electricas/electrica2">
+                  electrica2
+                </Link>
+                <Link className="dropdown-item" to="/electricas/electrica3">
+                  electrica3
+                </Link>
               </div>
             </li>
             <li>
