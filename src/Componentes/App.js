@@ -13,7 +13,8 @@ class App extends Component {
     super()
     this.state = {
       guitars: usersAPI.all(),
-      filteredGuitar: []
+      filteredGuitar: [],
+      src: '',
     }
   }
 
@@ -21,6 +22,18 @@ class App extends Component {
     const filteredGuitar = usersAPI.getFilteredGuitars(tipo)
     this.setState({ filteredGuitar })
   }
+
+  onSelectFile = e => {
+    if (e.target.files && e.target.files.length > 0) {
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        this.setState({ src: reader.result })
+        console.log('src', this.state.src)
+      }
+      );
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  };
 
 
   render() {
@@ -40,30 +53,6 @@ class App extends Component {
             <Main />
           </div>
         </div>
-        <div className="wrapper">
-          <button
-            className="btn btn-outline-primary"
-            onClick={() => this.mostrarGuitars('clasica')}>
-            Clasicas
-          </button>
-          <button
-            className="btn btn-outline-primary"
-            onClick={() => this.mostrarGuitars('acustica')}>
-            Acusticas
-          </button>
-          <button
-            className="btn btn-outline-primary"
-            onClick={() => this.mostrarGuitars('electrica')}>
-            Electricas
-          </button>
-        </div>
-        {/* <ul className="lista2 borde">
-          {this.state.filteredGuitar.map(e => (
-            <li>{e.modelo}</li>
-          ))}
-        </ul> */}
-        {/* <div className="respuesta-servidor"> Bienvenido:{this.state.usuario}
-        </div> */}
       </div>
     )
   }

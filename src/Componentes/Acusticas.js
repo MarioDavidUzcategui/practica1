@@ -6,7 +6,7 @@ import Profile from './Guitarra.js'
 const Acusticas = ({ match }) => (
   <Switch>
     <Route exact path={`${match.url}`} component={AllUsers} />
-    <Route path={`${match.url}/:modelo`} component={Profile}/>
+    <Route path={`${match.url}/:modelo`} component={Profile} />
   </Switch>
 )
 

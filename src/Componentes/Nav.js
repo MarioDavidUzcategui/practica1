@@ -11,8 +11,8 @@ class Nav extends Component {
     }
   }
 
-  handleOnCLick = () =>{
-    const {email} = this.state
+  handleOnCLick = () => {
+    const { email } = this.state
 
     fetch('http://localhost:3001/prueba', {
       method: 'POST',
@@ -20,11 +20,10 @@ class Nav extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-      email
-
+        email
       })
 
-    }).then(resp=>resp.json()).then(response => {
+    }).then(resp => resp.json()).then(response => {
       console.log("respuesta del servidos¡r", response)
       this.setState({
         usuario: response.usuario
@@ -37,11 +36,11 @@ class Nav extends Component {
   setEmail = e => {
     const email = e.target.value
     this.setState({
-    email
-  })
+      email
+    })
   }
 
-  render(){
+  render() {
     return (
       (
         <nav className="Nav-prin">
@@ -137,11 +136,11 @@ class Nav extends Component {
                     <label>
                       Email:{' '}
                     </label>
-                      <input type="text" placeholder="Ingrese Email" name="form1" /* onChange={this.setEmail} *//>
+                    <input type="text" placeholder="Ingrese Email" name="form1" /* onChange={this.setEmail} */ />
                     <label>
                       Contraseña:{' '}
                     </label>
-                      <input type="password" placeholder='Ingresa contraseña' /* onClick={this.handleOnCLick} *//>
+                    <input type="password" placeholder='Ingresa contraseña' /* onClick={this.handleOnCLick} */ />
                   </form>
                 </div>
                 <div className="modal-footer">

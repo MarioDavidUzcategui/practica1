@@ -4,17 +4,17 @@ import { connect } from "react-redux";
 
 const ListGuitars = (props) => {
   console.log('modelos', props.modelo)
-  const lista = props.modelo.map((i)=>
-  <li>
-    {i}
-  </li>)
+  const lista = props.modelo.map((i) =>
+    <li>
+      {i}
+    </li>)
 
-  return(
+  return (
     <div className='listaguitars'>
       <div>
         <div >
-          {(props.modelo[0])&&
-          ((props.modelo.length<=1)?'Te gusta el modelo':'te gustan los modelos') }
+          {(props.modelo[0]) &&
+            ((props.modelo.length <= 1) ? 'Te gusta el modelo' : 'te gustan los modelos')}
         </div>
         <div>
           <ul>
@@ -26,7 +26,7 @@ const ListGuitars = (props) => {
   )
 }
 
-const mapStateToProps = function(state) {
+const mapStateToProps = function (state) {
   return {
     like: state.like,
     modelo: state.modelo
