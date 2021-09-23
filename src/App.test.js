@@ -8,5 +8,9 @@ describe("Prueba general", () => {
     ReactDOM.render(<Prueba />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
+
+  it('prueba que falla', () => {
+    expect(true).toBe(false)
+  })
 })
 
