@@ -20,5 +20,9 @@ describe("Prueba general", () => {
   it('otra prueba que falla', () => {
     expect(1).toBe(2)
   })
+
+  it('otra prueba que falla12312', () => {
+    expect(3).toBe(1)
+  })
 })
 
