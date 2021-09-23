@@ -12,5 +12,9 @@ describe("Prueba general", () => {
   it('prueba que falla', () => {
     expect(true).toBe(false)
   })
+
+  it('prueba que falla', () => {
+    expect(false).toBe(true)
+  })
 })
 
