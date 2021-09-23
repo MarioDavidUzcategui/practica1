@@ -1,0 +1,31 @@
+name: Workflow de prueba react
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.14.2]
+
+    steps:
+    - name: Accion para copiar el codigo de repositorio en la máquina virtual de UBUNTU
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Instalar las dependencias
+      run: npm install
+
+    - name: Ejecutar el test
+      run: npm test
